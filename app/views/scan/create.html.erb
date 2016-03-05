@@ -1,0 +1,31 @@
+<h1>SSL Vulnerability scan report for <%=@hostr%></h1>
+
+
+<h1>Score:<%=@total_score%>%</h1>
+<% @results.each do |result| %>
+  <!-- Render stuff -->
+  <hr/>
+  <% result.each do |line| %>
+    <!-- Render child stuff -->
+    <%if line.include? "[" %>
+    <h1>
+    <%=line%>
+    </h1> 
+    <% elsif line.include? "NOT VULNERABLE"%>
+    	<font color='green'>
+    		<%=line%>
+    	</font>
+    		<%score=+1%>
+    <% elsif line.include? "VULNERABLE"%>
+        <font color='red'>
+   			<%=line%>
+    	</font>
+    
+    <% else %>
+      <%=line%>
+  	<% end %>
+  	    	<br/>
+
+	<% end %>
+<% end %>
+wow

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/local/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.01SVN scan initiated Sat Mar  5 17:03:32 2016 as: /usr/local/bin/nmap -sV -oX 94e724a4c094f92690ab01f4c76123b1.xml -v -&#45;script &quot;ssl-poodle, ssl-heartbleed, ssl-ccs-injection, ssl-dh-params&quot; -&#45;script-args vulns.showall -p 443 www.evaidya.com -->
+<nmaprun scanner="nmap" args="/usr/local/bin/nmap -sV -oX 94e724a4c094f92690ab01f4c76123b1.xml -v -&#45;script &quot;ssl-poodle, ssl-heartbleed, ssl-ccs-injection, ssl-dh-params&quot; -&#45;script-args vulns.showall -p 443 www.evaidya.com" start="1457177612" startstr="Sat Mar  5 17:03:32 2016" version="7.01SVN" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="1" services="443"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1457177613"/>
+<taskend task="NSE" time="1457177613"/>
+<taskbegin task="Ping Scan" time="1457177613"/>
+<taskend task="Ping Scan" time="1457177613" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1457177613"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1457177613"/>
+<taskbegin task="Connect Scan" time="1457177613"/>
+<taskend task="Connect Scan" time="1457177613" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1457177613"/>
+<taskend task="Service scan" time="1457177625" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1457177625"/>
+<taskend task="NSE" time="1457177641"/>
+<host starttime="1457177613" endtime="1457177641"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="54.251.113.53" addrtype="ipv4"/>
+<hostnames>
+<hostname name="www.evaidya.com" type="user"/>
+<hostname name="www.evaidya.com" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" version="1.7.1" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.7.1</cpe></service><script id="http-server-header" output="nginx/1.7.1"><elem>nginx/1.7.1</elem>
+</script><script id="ssl-ccs-injection" output="&#xa;  NOT VULNERABLE:&#xa;  SSL/TLS MITM vulnerability (CCS Injection)&#xa;    State: NOT VULNERABLE&#xa;    References:&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0224&#xa;      http://www.cvedetails.com/cve/2014-0224&#xa;      http://www.openssl.org/news/secadv_20140605.txt&#xa;"><table key="NMAP-1">
+<elem key="title">SSL/TLS MITM vulnerability (CCS Injection)</elem>
+<elem key="state">NOT VULNERABLE</elem>
+<table key="refs">
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0224</elem>
+<elem>http://www.cvedetails.com/cve/2014-0224</elem>
+<elem>http://www.openssl.org/news/secadv_20140605.txt</elem>
+</table>
+</table>
+</script><script id="ssl-dh-params" output="&#xa;  NOT VULNERABLE:&#xa;  Anonymous Diffie-Hellman Key Exchange MitM Vulnerability&#xa;    State: NOT VULNERABLE&#xa;    References:&#xa;      https://www.ietf.org/rfc/rfc2246.txt&#xa;  &#xa;  Transport Layer Security (TLS) Protocol DHE_EXPORT Ciphers Downgrade MitM (Logjam)&#xa;    State: NOT VULNERABLE&#xa;    IDs:  OSVDB:122331  CVE:CVE-2015-4000&#xa;    References:&#xa;      http://osvdb.org/122331&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4000&#xa;      https://weakdh.org&#xa;  &#xa;  Diffie-Hellman Key Exchange Insufficient Group Strength&#xa;    State: NOT VULNERABLE&#xa;    References:&#xa;      https://weakdh.org&#xa;  &#xa;  Diffie-Hellman Key Exchange Incorrectly Generated Group Parameters&#xa;    State: NOT VULNERABLE&#xa;    References:&#xa;      http://www2.esentire.com/TLSUnjammedWP&#xa;      https://weakdh.org&#xa;"><table key="NMAP-2">
+<elem key="title">Anonymous Diffie-Hellman Key Exchange MitM Vulnerability</elem>
+<elem key="state">NOT VULNERABLE</elem>
+<table key="refs">
+<elem>https://www.ietf.org/rfc/rfc2246.txt</elem>
+</table>
+</table>
+<table key="CVE-2015-4000">
+<elem key="title">Transport Layer Security (TLS) Protocol DHE_EXPORT Ciphers Downgrade MitM (Logjam)</elem>
+<elem key="state">NOT VULNERABLE</elem>
+<table key="ids">
+<elem>OSVDB:122331</elem>
+<elem>CVE:CVE-2015-4000</elem>
+</table>
+<table key="refs">
+<elem>http://osvdb.org/122331</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4000</elem>
+<elem>https://weakdh.org</elem>
+</table>
+</table>
+<table key="NMAP-3">
+<elem key="title">Diffie-Hellman Key Exchange Insufficient Group Strength</elem>
+<elem key="state">NOT VULNERABLE</elem>
+<table key="refs">
+<elem>https://weakdh.org</elem>
+</table>
+</table>
+<table key="NMAP-4">
+<elem key="title">Diffie-Hellman Key Exchange Incorrectly Generated Group Parameters</elem>
+<elem key="state">NOT VULNERABLE</elem>
+<table key="refs">
+<elem>http://www2.esentire.com/TLSUnjammedWP</elem>
+<elem>https://weakdh.org</elem>
+</table>
+</table>
+</script><script id="ssl-heartbleed" output="&#xa;  NOT VULNERABLE:&#xa;  The Heartbleed Bug is a serious vulnerability in the popular OpenSSL cryptographic software library. It allows for stealing information intended to be protected by SSL/TLS encryption.&#xa;    State: NOT VULNERABLE&#xa;    References:&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0160&#xa;      http://www.openssl.org/news/secadv_20140407.txt &#xa;      http://cvedetails.com/cve/2014-0160/&#xa;"><table key="NMAP-5">
+<elem key="title">The Heartbleed Bug is a serious vulnerability in the popular OpenSSL cryptographic software library. It allows for stealing information intended to be protected by SSL/TLS encryption.</elem>
+<elem key="state">NOT VULNERABLE</elem>
+<table key="refs">
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0160</elem>
+<elem>http://www.openssl.org/news/secadv_20140407.txt </elem>
+<elem>http://cvedetails.com/cve/2014-0160/</elem>
+</table>
+</table>
+</script><script id="ssl-poodle" output="&#xa;  NOT VULNERABLE:&#xa;  SSL POODLE information leak&#xa;    State: NOT VULNERABLE&#xa;    IDs:  OSVDB:113251  CVE:CVE-2014-3566&#xa;    References:&#xa;      https://www.openssl.org/~bodo/ssl-poodle.pdf&#xa;      https://www.imperialviolet.org/2014/10/14/poodle.html&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566&#xa;      http://osvdb.org/113251&#xa;"><table key="CVE-2014-3566">
+<elem key="title">SSL POODLE information leak</elem>
+<elem key="state">NOT VULNERABLE</elem>
+<table key="ids">
+<elem>OSVDB:113251</elem>
+<elem>CVE:CVE-2014-3566</elem>
+</table>
+<table key="refs">
+<elem>https://www.openssl.org/~bodo/ssl-poodle.pdf</elem>
+<elem>https://www.imperialviolet.org/2014/10/14/poodle.html</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566</elem>
+<elem>http://osvdb.org/113251</elem>
+</table>
+</table>
+</script></port>
+</ports>
+<times srtt="49385" rttvar="37177" to="198093"/>
+</host>
+<taskbegin task="NSE" time="1457177641"/>
+<taskend task="NSE" time="1457177641"/>
+<runstats><finished time="1457177641" timestr="Sat Mar  5 17:04:01 2016" elapsed="28.86" summary="Nmap done at Sat Mar  5 17:04:01 2016; 1 IP address (1 host up) scanned in 28.86 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

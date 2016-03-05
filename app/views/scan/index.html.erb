@@ -1,0 +1,7 @@
+<h1> Vulnerability scan </h1>
+
+<%= form_tag("/scan", method: "post") do %>
+  <%= label_tag(:q, "Scan:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Scan") %>
+<% end %>

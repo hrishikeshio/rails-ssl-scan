@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/local/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.01SVN scan initiated Sat Mar  5 17:11:28 2016 as: /usr/local/bin/nmap -sV -oX 0a137b375cc3881a70e186ce2172c8d1.xml -v -&#45;script &quot;ssl-poodle, ssl-heartbleed, ssl-ccs-injection, ssl-dh-params&quot; -&#45;script-args vulns.showall -p 443 www.google.com -->
+<nmaprun scanner="nmap" args="/usr/local/bin/nmap -sV -oX 0a137b375cc3881a70e186ce2172c8d1.xml -v -&#45;script &quot;ssl-poodle, ssl-heartbleed, ssl-ccs-injection, ssl-dh-params&quot; -&#45;script-args vulns.showall -p 443 www.google.com" start="1457178088" startstr="Sat Mar  5 17:11:28 2016" version="7.01SVN" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="1" services="443"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1457178089"/>
+<taskend task="NSE" time="1457178089"/>
+<taskbegin task="Ping Scan" time="1457178089"/>
+<taskend task="Ping Scan" time="1457178089" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1457178089"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1457178089"/>
+<taskbegin task="Connect Scan" time="1457178089"/>
+<taskend task="Connect Scan" time="1457178089" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1457178089"/>
+<taskend task="Service scan" time="1457178157" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1457178157"/>
+<taskend task="NSE" time="1457178159"/>
+<host starttime="1457178089" endtime="1457178159"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="216.58.197.68" addrtype="ipv4"/>
+<hostnames>
+<hostname name="www.google.com" type="user"/>
+<hostname name="www.google.com" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" servicefp="SF-Port443-TCP:V=7.01SVN%T=SSL%I=7%D=3/5%Time=56DAC5F5%P=x86_64-unknown-linux-gnu%r(GetRequest,277,&quot;HTTP/1\.0\x20302\x20Found\r\nCache-Control:\x20private\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nLocation:\x20https://www\.google\.co\.in/\?gfe_rd=cr&amp;ei=9cXaVoWdJcGL8Qfhy7WwAg\r\nContent-Length:\x20262\r\nDate:\x20Sat,\x2005\x20Mar\x202016\x2011:41:41\x20GMT\r\nAlternate-Protocol:\x20443:quic,p=1\r\nAlt-Svc:\x20quic=\&quot;www\.google\.com:443\&quot;;\x20ma=2592000;\x20v=\&quot;30,29,28,27,26,25\&quot;,quic=\&quot;:443\&quot;;\x20ma=2592000;\x20v=\&quot;30,29,28,27,26,25\&quot;\r\n\r\n&lt;HTML&gt;&lt;HEAD&gt;&lt;meta\x20http-equiv=\&quot;content-type\&quot;\x20content=\&quot;text/html;charset=utf-8\&quot;&gt;\n&lt;TITLE&gt;302\x20Moved&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;\n&lt;H1&gt;302\x20Moved&lt;/H1&gt;\nThe\x20document\x20has\x20moved\n&lt;A\x20HREF=\&quot;https://www\.google\.co\.in/\?gfe_rd=cr&amp;amp;ei=9cXaVoWdJcGL8Qfhy7WwAg\&quot;&gt;here&lt;/A&gt;\.\r\n&lt;/BODY&gt;&lt;/HTML&gt;\r\n&quot;)%r(HTTPOptions,756,&quot;HTTP/1\.0\x20405\x20Method\x20Not\x20Allowed\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\x201592\r\nDate:\x20Sat,\x2005\x20Mar\x202016\x2011:41:41\x20GMT\r\nAlternate-Protocol:\x20443:quic,p=1\r\nAlt-Svc:\x20quic=\&quot;www\.google\.com:443\&quot;;\x20ma=2592000;\x20v=\&quot;30,29,28,27,26,25\&quot;,quic=\&quot;:443\&quot;;\x20ma=2592000;\x20v=\&quot;30,29,28,27,26,25\&quot;\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=en&gt;\n\x20\x20&lt;meta\x20charset=utf-8&gt;\n\x20\x20&lt;meta\x20name=viewport\x20content=\&quot;initial-scale=1,\x20minimum-scale=1,\x20width=device-width\&quot;&gt;\n\x20\x20&lt;title&gt;Error\x20405\x20\(Method\x20Not\x20Allowed\)!!1&lt;/title&gt;\n\x20\x20&lt;style&gt;\n\x20\x20\x20\x20\*{margin:0;padding:0}html,code{font:15px/22px\x20arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7%\x20auto\x200;max-width:390px;min-height:180px;padding:30px\x200\x2015px}\*\x20&gt;\x20body{background:url\(//www\.google\.com/images/errors/robot\.png\)\x20100%\x205px\x20no-repeat;padding-right:205px}p{margin:11px\x200\x2022px;overflow:hidden}ins{color:#777;text-decoration:none}a\x20img{border:0}@media\x20screen\x20and\x20\(max-width:772p&quot;)%r(FourOhFourRequest,6B3,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\x201590\r\nDate:\x20Sat,\x2005\x20Mar\x202016\x2011:41:42\x20GMT\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=en&gt;\n\x20\x20&lt;meta\x20charset=utf-8&gt;\n\x20\x20&lt;meta\x20name=viewport\x20content=\&quot;initial-scale=1,\x20minimum-scale=1,\x20width=device-width\&quot;&gt;\n\x20\x20&lt;title&gt;Error\x20404\x20\(Not\x20Found\)!!1&lt;/title&gt;\n\x20\x20&lt;style&gt;\n\x20\x20\x20\x20\*{margin:0;padding:0}html,code{font:15px/22px\x20arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7%\x20auto\x200;max-width:390px;min-height:180px;padding:30px\x200\x2015px}\*\x20&gt;\x20body{background:url\(//www\.google\.com/images/errors/robot\.png\)\x20100%\x205px\x20no-repeat;padding-right:205px}p{margin:11px\x200\x2022px;overflow:hidden}ins{color:#777;text-decoration:none}a\x20img{border:0}@media\x20screen\x20and\x20\(max-width:772px\){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url\(//www\.google\.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp\.png\)\x20no&quot;);" tunnel="ssl" method="probed" conf="10"/><script id="ssl-ccs-injection" output="&#xa;  NOT VULNERABLE:&#xa;  SSL/TLS MITM vulnerability (CCS Injection)&#xa;    State: NOT VULNERABLE&#xa;    References:&#xa;      http://www.cvedetails.com/cve/2014-0224&#xa;      http://www.openssl.org/news/secadv_20140605.txt&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0224&#xa;"><table key="NMAP-1">
+<elem key="title">SSL/TLS MITM vulnerability (CCS Injection)</elem>
+<elem key="state">NOT VULNERABLE</elem>
+<table key="refs">
+<elem>http://www.cvedetails.com/cve/2014-0224</elem>
+<elem>http://www.openssl.org/news/secadv_20140605.txt</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0224</elem>
+</table>
+</table>
+</script><script id="ssl-dh-params" output="&#xa;  NOT VULNERABLE:&#xa;  Anonymous Diffie-Hellman Key Exchange MitM Vulnerability&#xa;    State: NOT VULNERABLE&#xa;    References:&#xa;      https://www.ietf.org/rfc/rfc2246.txt&#xa;  &#xa;  Transport Layer Security (TLS) Protocol DHE_EXPORT Ciphers Downgrade MitM (Logjam)&#xa;    State: NOT VULNERABLE&#xa;    IDs:  OSVDB:122331  CVE:CVE-2015-4000&#xa;    References:&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4000&#xa;      http://osvdb.org/122331&#xa;      https://weakdh.org&#xa;  &#xa;  Diffie-Hellman Key Exchange Insufficient Group Strength&#xa;    State: NOT VULNERABLE&#xa;    References:&#xa;      https://weakdh.org&#xa;  &#xa;  Diffie-Hellman Key Exchange Incorrectly Generated Group Parameters&#xa;    State: NOT VULNERABLE&#xa;    References:&#xa;      http://www2.esentire.com/TLSUnjammedWP&#xa;      https://weakdh.org&#xa;"><table key="NMAP-3">
+<elem key="title">Anonymous Diffie-Hellman Key Exchange MitM Vulnerability</elem>
+<elem key="state">NOT VULNERABLE</elem>
+<table key="refs">
+<elem>https://www.ietf.org/rfc/rfc2246.txt</elem>
+</table>
+</table>
+<table key="CVE-2015-4000">
+<elem key="title">Transport Layer Security (TLS) Protocol DHE_EXPORT Ciphers Downgrade MitM (Logjam)</elem>
+<elem key="state">NOT VULNERABLE</elem>
+<table key="ids">
+<elem>OSVDB:122331</elem>
+<elem>CVE:CVE-2015-4000</elem>
+</table>
+<table key="refs">
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4000</elem>
+<elem>http://osvdb.org/122331</elem>
+<elem>https://weakdh.org</elem>
+</table>
+</table>
+<table key="NMAP-4">
+<elem key="title">Diffie-Hellman Key Exchange Insufficient Group Strength</elem>
+<elem key="state">NOT VULNERABLE</elem>
+<table key="refs">
+<elem>https://weakdh.org</elem>
+</table>
+</table>
+<table key="NMAP-5">
+<elem key="title">Diffie-Hellman Key Exchange Incorrectly Generated Group Parameters</elem>
+<elem key="state">NOT VULNERABLE</elem>
+<table key="refs">
+<elem>http://www2.esentire.com/TLSUnjammedWP</elem>
+<elem>https://weakdh.org</elem>
+</table>
+</table>
+</script><script id="ssl-heartbleed" output="&#xa;  NOT VULNERABLE:&#xa;  The Heartbleed Bug is a serious vulnerability in the popular OpenSSL cryptographic software library. It allows for stealing information intended to be protected by SSL/TLS encryption.&#xa;    State: NOT VULNERABLE&#xa;    References:&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0160&#xa;      http://www.openssl.org/news/secadv_20140407.txt &#xa;      http://cvedetails.com/cve/2014-0160/&#xa;"><table key="NMAP-2">
+<elem key="title">The Heartbleed Bug is a serious vulnerability in the popular OpenSSL cryptographic software library. It allows for stealing information intended to be protected by SSL/TLS encryption.</elem>
+<elem key="state">NOT VULNERABLE</elem>
+<table key="refs">
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0160</elem>
+<elem>http://www.openssl.org/news/secadv_20140407.txt </elem>
+<elem>http://cvedetails.com/cve/2014-0160/</elem>
+</table>
+</table>
+</script><script id="ssl-poodle" output="&#xa;  VULNERABLE:&#xa;  SSL POODLE information leak&#xa;    State: LIKELY VULNERABLE&#xa;    IDs:  OSVDB:113251  CVE:CVE-2014-3566&#xa;          The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and&#xa;          other products, uses nondeterministic CBC padding, which makes it easier&#xa;          for man-in-the-middle attackers to obtain cleartext data via a&#xa;          padding-oracle attack, aka the &quot;POODLE&quot; issue.&#xa;    Disclosure date: 2014-10-14&#xa;    Check results:&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA&#xa;      TLS_FALLBACK_SCSV properly implemented&#xa;    References:&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566&#xa;      https://www.imperialviolet.org/2014/10/14/poodle.html&#xa;      https://www.openssl.org/~bodo/ssl-poodle.pdf&#xa;      http://osvdb.org/113251&#xa;"><table key="CVE-2014-3566">
+<elem key="title">SSL POODLE information leak</elem>
+<elem key="state">LIKELY VULNERABLE</elem>
+<table key="ids">
+<elem>OSVDB:113251</elem>
+<elem>CVE:CVE-2014-3566</elem>
+</table>
+<table key="description">
+<elem>    The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and&#xa;    other products, uses nondeterministic CBC padding, which makes it easier&#xa;    for man-in-the-middle attackers to obtain cleartext data via a&#xa;    padding-oracle attack, aka the &quot;POODLE&quot; issue.</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="year">2014</elem>
+<elem key="day">14</elem>
+<elem key="month">10</elem>
+</table>
+</table>
+<elem key="disclosure">2014-10-14</elem>
+<table key="check_results">
+<elem>TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem>TLS_FALLBACK_SCSV properly implemented</elem>
+</table>
+<table key="refs">
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566</elem>
+<elem>https://www.imperialviolet.org/2014/10/14/poodle.html</elem>
+<elem>https://www.openssl.org/~bodo/ssl-poodle.pdf</elem>
+<elem>http://osvdb.org/113251</elem>
+</table>
+</table>
+</script></port>
+</ports>
+<times srtt="42839" rttvar="32383" to="172371"/>
+</host>
+<taskbegin task="NSE" time="1457178159"/>
+<taskend task="NSE" time="1457178159"/>
+<runstats><finished time="1457178159" timestr="Sat Mar  5 17:12:39 2016" elapsed="71.50" summary="Nmap done at Sat Mar  5 17:12:39 2016; 1 IP address (1 host up) scanned in 71.50 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
